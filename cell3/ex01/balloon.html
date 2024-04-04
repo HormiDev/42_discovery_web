@@ -3,15 +3,20 @@
 <head>
     <title>balloon</title>
     <style>
+        :root{
+            --size: 200px;
+            --color: red;
+        }
+
         *{
             margin: 0;
             padding: 0;
         }
 
-        .globo{
-            width: 200px;
-            height: 200px;
-            background-color: red;
+        div{
+            width: var(--size);
+            height: var(--size);
+            background-color: var(--color);
             border-radius: 50%;
         }
 
@@ -20,17 +25,33 @@
         }
     </style>
     <script>
+        let color = 1;
+        let colores = ["red", "green", "blue"];
+
         function infla_globo()
         {
-            
+            color++;
+            if (color > 3) color = 1;
+            document.documentElement.style.setProperty('--color', colores[color -1]);
+            let currentSize = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--size')) + 10;
+            if (currentSize > 420) currentSize = 200;
+            document.documentElement.style.setProperty('--size', String(currentSize) + 'px');
+        }
+
+        function desinfla_globo()
+        {
+            color--;
+            if (color < 1) color = 3;
+            document.documentElement.style.setProperty('--color', colores[color -1]);
+            let currentSize = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--size')) - 5;
+            if (currentSize < 200) currentSize = 200;
+            document.documentElement.style.setProperty('--size', String(currentSize) + 'px');
         }
     </script>
 </head>
 
 <html>
     <body>
-        <div for="globo" class="globo">
-            <input type="button" id="globo" onclick="infla_globo()">
-        </div>
+        <div onclick="infla_globo()" onmouseout="desinfla_globo()" id="globo"></div>
     </body>
 </html>
