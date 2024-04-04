@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<head>
+    <title>calc</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            background-color: rgb(54, 58, 59);
+        }
+    </style>
+    <script>
+        setInterval(usame, 30000);
+
+        function usame()
+        {
+            alert("Please, useme...");
+        }
+
+        function calcula()
+        {
+            var valor1 = document.getElementById("n1").value;
+            var valor2 = document.getElementById("n2").value;
+            var simbolo = document.getElementById("simbolo").value;
+            var resutlado = 0;
+
+            if (Number(valor1) < 0 || Number(valor2) < 0)
+            {
+                alert("Error");
+                console.log("Error");
+            }
+            else if (simbolo == 1)
+            {
+                resutlado = Number(valor1) + Number(valor2);
+                alert(valor1 + " " + "+" + " " + valor2 + " = " + resutlado);
+                console.log(valor1 + " " + "+" + " " + valor2 + " = " + resutlado);
+            }
+            else if (simbolo == 2)
+            {
+                resutlado = Number(valor1) - Number(valor2);
+                if (Number(valor2) == 0)
+                alert(valor1 + " " + "-" + " " + valor2 + " = " + resutlado);
+                console.log(valor1 + " " + "-" + " " + valor2 + " = " + resutlado);
+            }
+            else if (simbolo == 3)
+            {
+                resutlado = Number(valor1) * Number(valor2);
+                alert(valor1 + " " + "*" + " " + valor2 + " = " + resutlado);
+                console.log(valor1 + " " + "*" + " " + valor2 + " = " + resutlado);
+            }
+            else if (simbolo == 4)
+            {
+                resutlado = Number(valor1) / Number(valor2);
+                if (Number(valor2) == 0) alert("It's over 9000!");
+                else alert(valor1 + " " + "/" + " " + valor2 + " = " + resutlado);
+                console.log(valor1 + " " + "/" + " " + valor2 + " = " + resutlado);
+            }
+            else if (simbolo == 5)
+            {
+                resutlado = Number(valor1) % Number(valor2);
+                if (Number(valor2) == 0) alert("It's over 9000!");
+                else alert(valor1 + " " + "%" + " " + valor2 + " = " + resutlado);
+                console.log(valor1 + " " + "%" + " " + valor2 + " = " + resutlado);
+            }
+        }
+    </script>
+</head>
+
+<html>
+    <body>
+        <input id="n1" type="text">
+        <select name="" id="simbolo">
+            <option value="1">+</option>
+            <option value="2">-</option>
+            <option value="3">*</option>
+            <option value="4">/</option>
+            <option value="5">%</option>
+        </select>
+        <input id="n2" type="text">
+        <button onclick="calcula()">Try me!</button>
+    </body>
+</html>
