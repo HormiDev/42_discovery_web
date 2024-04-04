@@ -1,5 +1,15 @@
-while ["$#" -gt 0]
-do
+
+if [ $# -ge 1 ]
+then
 	echo "$1"
-	shift
-done
+fi
+if [ $# -ge 2 ]
+then
+	echo "$2"
+fi
+if [ $# -ge 3 ]
+then
+	echo "$3"
+fi
+shift
+

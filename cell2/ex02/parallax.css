@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+div{
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100%;
+    background-attachment: fixed;
+}
+
+h1{
+    color: white;
+    text-align: center;
+}
+
+.parallax_1{
+    background-image: url(https://s1.1zoom.me/b5050/864/432521-svetik_1920x1080.jpg);
+}
+
+.parallax_2{
+    background-color: black;
+    height: 50%;
+}
+
+.parallax_3{
+    background-image: url(https://img2.wallspic.com/crops/4/0/0/6/7/176004/176004-puente_golden_gate-arte-agua-ambiente-afterglow-1920x1080.jpg);
+}

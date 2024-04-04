@@ -1,0 +1,14 @@
+:root{
+    --red: 255;
+    --green: 255;
+    --blue: 255;
+    --fontsize: 80%;
+}
+
+body{
+    background-color: rgb(var(--red), var(--green), var(--blue));
+}
+
+input{
+    font-size: var(--fontsize);
+}
