@@ -4,6 +4,6 @@ Participé en la piscina Discovery de Web de 42 Network en el campus de 42 Madri
 
 ## Progreso (nivel 12 - 86%)
 
-Al final completé toda la piscina alcanzando el **nivel 12 + 86%**. Logré hacer el proyecto final sin completar los dos proyectos anteriores.
+Al final no completé toda la piscina alcanzando el **nivel 12 + 86%**. Logré hacer el proyecto final sin completar los dos proyectos anteriores.
 
 ## Perfil intra [ivde-die](https://profile.intra.42.fr/users/ivde-die)
